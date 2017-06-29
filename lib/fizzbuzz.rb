@@ -1,11 +1,8 @@
-def fizzbuzz(number)
-  if number % 3 == 0 && number % 5 == 0
-    return "fizzbuzz"
-  elsif number % 3 == 0
-    return "fizz"
-  elsif number % 5 == 0
-  return "buzz"
-else
-  number
-end
+class Fixnum
+  def fizzbuzz
+    return "fizzbuzz" if self % 3 == 0 && self % 5 == 0
+    return "fizz" if self % 3 == 0
+    return "buzz" if self % 5 == 0
+    return self if self % 3 != 0 && self % 5 != 0
+  end
 end
